@@ -307,17 +307,14 @@ function DNAStrand(dna) {
                 break
             case "G":
                 lettersPaired.push("C")
-
                 break
             case "C":
                 lettersPaired.push("G");
-
                 break
         }
     }
     for (var i = 0; i < dna.length; i++) {
         findPairing(dna[i])
-        // console.log(i)
     }
     return lettersPaired
 }
