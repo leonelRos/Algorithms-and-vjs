@@ -232,7 +232,7 @@ console.log(romanToInt("VI")) //6
 // console.log(lastApel)
 
 //Longest common prefix
-
+//horizontal method
 var longestCommonPrefix = function (strs) {
     let prefix = '';
     if (strs.length === 0) {
@@ -253,3 +253,36 @@ var longestCommonPrefix = function (strs) {
 }
 
 console.log(longestCommonPrefix(["flower", "flow", "flight"]))
+
+//multiples of 3 and 5. Add them all
+
+// n=10
+
+function solution(number) {
+    var suma = 0
+    // let num = [];
+    for (var i = 1; i < number; i++) {
+        if ((i % 3 === 0) || (i % 5 === 0) || (i % 3 === 0 && i % 5 === 0)) {
+            suma += i
+
+            // return i;
+        }
+    }
+    return suma
+}
+console.log(solution(10)) //23
+
+//removing the vowels
+function disemvowel(str) {
+    // var a = str.toUpperCase().split('')
+    // var vowels = new Array('A', 'E', 'I', 'O', 'U')
+    // console.log(vowels)
+    // console.log(a)
+
+
+    return str.replace(/[aeiou]/gi, "");
+
+
+
+}
+console.log(disemvowel('This website is for losers LOL!'))
