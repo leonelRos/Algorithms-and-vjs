@@ -278,11 +278,51 @@ function disemvowel(str) {
     // var vowels = new Array('A', 'E', 'I', 'O', 'U')
     // console.log(vowels)
     // console.log(a)
-
-
     return str.replace(/[aeiou]/gi, "");
-
-
 
 }
 console.log(disemvowel('This website is for losers LOL!'))
+
+
+
+//DNA practice:
+
+//In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". 
+// You have function with one side of the DNA (string, except for Haskell); 
+// you need to get the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+
+function DNAStrand(dna) {
+    let lettersPaired = [];
+    // let lettersPaired = "";
+
+    let findPairing = function (character) {
+        switch (character) {
+            case "A":
+                lettersPaired.push("T");
+
+                break;
+            case "T":
+                lettersPaired.push("A")
+
+                break
+            case "G":
+                lettersPaired.push("C")
+
+                break
+            case "C":
+                lettersPaired.push("G");
+
+                break
+        }
+    }
+    for (var i = 0; i < dna.length; i++) {
+        findPairing(dna[i])
+        // console.log(i)
+    }
+    return lettersPaired
+}
+
+//need to return a full string of all the words
+
+console.log(DNAStrand("ATTGC"))
+console.log(DNAStrand("GTAT"))
