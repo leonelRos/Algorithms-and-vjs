@@ -336,9 +336,5 @@ function checkParen(paren) {
             return "doesnt not match"
         }
     }
-
-
-
-
 }
 console.log(checkParen("()"))
