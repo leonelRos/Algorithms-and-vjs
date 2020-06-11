@@ -293,17 +293,14 @@ console.log(disemvowel('This website is for losers LOL!'))
 
 function DNAStrand(dna) {
     let lettersPaired = [];
-    // let lettersPaired = "";
 
     let findPairing = function (character) {
         switch (character) {
             case "A":
                 lettersPaired.push("T");
-
                 break;
             case "T":
                 lettersPaired.push("A")
-
                 break
             case "G":
                 lettersPaired.push("C")
@@ -312,14 +309,36 @@ function DNAStrand(dna) {
                 lettersPaired.push("G");
                 break
         }
+        console.log(lettersPaired)
     }
     for (var i = 0; i < dna.length; i++) {
         findPairing(dna[i])
     }
-    return lettersPaired
+    return "".concat(lettersPaired)
 }
 
 //need to return a full string of all the words
 
 console.log(DNAStrand("ATTGC"))
 console.log(DNAStrand("GTAT"))
+
+//validate the parenthesis
+
+function checkParen(paren) {
+    let newParen = ["(", "[", "{"]
+    let closinParen;
+    for (var i = 0; i < newParen.length; i++) {
+        var validParen = newParen[i]
+        console.log(validParen)
+        if (validParen == "{") {
+            return "this matches"
+        } else {
+            return "doesnt not match"
+        }
+    }
+
+
+
+
+}
+console.log(checkParen("()"))
