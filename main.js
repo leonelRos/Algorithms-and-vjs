@@ -322,17 +322,5 @@ console.log(DNAStrand("ATTGC"))
 console.log(DNAStrand("GTAT"))
 //validate the parenthesis
 
-function checkParen(paren) {
-    let newParen = ["(", "[", "{"]
-    let closinParen;
-    for (var i = 0; i < newParen.length; i++) {
-        var validParen = newParen[i]
-        console.log(validParen)
-        if (validParen == "{") {
-            return "this matches"
-        } else {
-            return "doesnt not match"
-        }
-    }
-}
+function checkParen(paren) {}
 console.log(checkParen("()"))
