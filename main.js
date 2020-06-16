@@ -349,3 +349,26 @@ function checkParen(paren) {
 console.log(checkParen("()"))
 console.log(checkParen("())"))
 console.log(checkParen("{()}"))
+
+
+//bag of kilos
+function createPackage(small, big, goal) {
+    while (big > 0 && goal >= 5) {
+        goal -= 5;
+        big--;
+    }
+    if (goal > small) return -1;
+
+    return goal;
+}
+
+console.log(createPackage(5, 9, 7))
+//triple threat
+function tripleThreat(a) {
+    for (var i = 0; i < a.length; i++) {
+        console.log(i)
+        if (a[i + 1] === a[i] + 1 && a[i + 2] === a[i] + 2) return 1
+    }
+    i += 1;
+    return 0;
+}
