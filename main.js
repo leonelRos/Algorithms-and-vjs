@@ -350,7 +350,6 @@ console.log(checkParen("()"))
 console.log(checkParen("())"))
 console.log(checkParen("{()}"))
 
-
 //bag of kilos
 function createPackage(small, big, goal) {
     while (big > 0 && goal >= 5) {
