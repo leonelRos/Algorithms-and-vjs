@@ -321,7 +321,6 @@ function DNAStrand(dna) {
 console.log(DNAStrand("ATTGC"))
 console.log(DNAStrand("GTAT"))
 //validate the parenthesis
-
 function checkParen(paren) {
     if (paren.length === 0)
         return true;
