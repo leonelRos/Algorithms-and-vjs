@@ -320,6 +320,8 @@ function DNAStrand(dna) {
 //need to return a full string of all the words
 console.log(DNAStrand("ATTGC"))
 console.log(DNAStrand("GTAT"))
+
+
 //validate the parenthesis
 function checkParen(paren) {
     if (paren.length === 0)
