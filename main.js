@@ -376,13 +376,12 @@ function tripleThreat(a) {
 
 //split string into a value of pairs
 function solution(str) {
-    var newStr = str.split(' ');
+    var newStr = str.split('', 3);
     console.log(newStr)
     for (var i = 0; i < newStr.length; i++) {
-        var str1 = newStr[i].split('')
+        var str1 = newStr[i].split('', 3)
         console.log(str1)
     }
-
 }
 
 solution('abc')
