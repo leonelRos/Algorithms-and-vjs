@@ -258,19 +258,19 @@ console.log(longestCommonPrefix(["flower", "flow", "flight"]))
 
 // n=10
 
-function solution(number) {
-    var suma = 0
-    // let num = [];
-    for (var i = 1; i < number; i++) {
-        if ((i % 3 === 0) || (i % 5 === 0) || (i % 3 === 0 && i % 5 === 0)) {
-            suma += i
+// function solution(number) {
+//     var suma = 0
+//     // let num = [];
+//     for (var i = 1; i < number; i++) {
+//         if ((i % 3 === 0) || (i % 5 === 0) || (i % 3 === 0 && i % 5 === 0)) {
+//             suma += i
 
-            // return i;
-        }
-    }
-    return suma
-}
-console.log(solution(10)) //23
+//             // return i;
+//         }
+//     }
+//     return suma
+// }
+// console.log(solution(10)) //23
 
 //removing the vowels
 function disemvowel(str) {
@@ -372,3 +372,17 @@ function tripleThreat(a) {
     i += 1;
     return 0;
 }
+
+
+//split string into a value of pairs
+function solution(str) {
+    var newStr = str.split(' ');
+    console.log(newStr)
+    for (var i = 0; i < newStr.length; i++) {
+        var str1 = newStr[i].split('')
+        console.log(str1)
+    }
+
+}
+
+solution('abc')
