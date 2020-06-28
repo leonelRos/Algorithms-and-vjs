@@ -373,7 +373,6 @@ function tripleThreat(a) {
     return 0;
 }
 
-
 //split string into a value of pairs
 function solution(str) {
     var newStr = str.split('', 3);
