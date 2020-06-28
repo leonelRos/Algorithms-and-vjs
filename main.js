@@ -361,7 +361,6 @@ function createPackage(small, big, goal) {
 
     return goal;
 }
-
 console.log(createPackage(5, 9, 7))
 //triple threat
 function tripleThreat(a) {
