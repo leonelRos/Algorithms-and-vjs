@@ -30,7 +30,6 @@
 
 //         }
 
-
 //     var listOfQuestion = [question1, question2, question3]
 
 //     //we are selecting a random question anc console it 
