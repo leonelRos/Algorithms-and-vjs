@@ -283,8 +283,6 @@ function disemvowel(str) {
 }
 console.log(disemvowel('This website is for losers LOL!'))
 
-
-
 //DNA practice:
 
 //In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". 
