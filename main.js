@@ -403,5 +403,11 @@ console.log(findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5]))
 // Capitalize the words
 
 function toJadenCase() {
-
+    var str = ""
+    var newStr = str.toLowerCase().split(' ');
+    for (let i = 0; i < newStr.length; i++) {
+        newStr[i] = newStr[i].charAt(0).toUpperCase() + newStr[i].substring(1)
+        // console.log(newCurr)
+    }
+    return newStr.join(' ')
 }
