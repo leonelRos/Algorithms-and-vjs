@@ -311,7 +311,7 @@ function DNAStrand(dna) {
     for (var i = 0; i < dna.length; i++) {
         findPairing(dna[i])
     }
-    return "".concat(lettersPaired)
+    return lettersPaired.join('')
 }
 
 //need to return a full string of all the words
