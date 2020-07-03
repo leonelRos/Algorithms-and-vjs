@@ -411,3 +411,12 @@ String.prototype.toJadenCase = function () {
     return finalString.join(' ')
 }
 
+//counting how many true in the array
+function countTrue(a) {
+    // if (a == [] ) return 0
+    let result2 = a.filter(b => b == true)
+    return result2.length
+}
+console.log(countTrue([true, false, false, true, false])) //2
+console.log(countTrue([true, false, true, true, false])) //3
+console.log(countTrue([])) //0
