@@ -402,12 +402,12 @@ console.log(findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5]))
 
 // Capitalize the words
 
-function toJadenCase() {
-    var str = ""
-    var newStr = str.toLowerCase().split(' ');
-    for (let i = 0; i < newStr.length; i++) {
-        newStr[i] = newStr[i].charAt(0).toUpperCase() + newStr[i].substring(1)
-        // console.log(newCurr)
+String.prototype.toJadenCase = function () {
+    //in a prototype function think of assigning "this" to a variable
+    let finalString = this.toLowerCase().split(' ')
+    for (let i = 0; i < finalString.length; i++){
+        finalString[i] = finalString[i].charAt(0).toUpperCase() + finalString[i].substring(1)
     }
-    return newStr.join(' ')
+    return finalString.join(' ')
 }
+
