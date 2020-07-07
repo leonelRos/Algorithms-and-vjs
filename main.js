@@ -409,6 +409,7 @@ String.prototype.toJadenCase = function () {
     return finalString.join(' ')
 }
 
+
 //counting how many true in the array
 function countTrue(a) {
     // if (a == [] ) return 0
