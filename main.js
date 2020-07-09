@@ -419,3 +419,23 @@ function countTrue(a) {
 console.log(countTrue([true, false, false, true, false])) //2
 console.log(countTrue([true, false, true, true, false])) //3
 console.log(countTrue([])) //0
+
+//pushin ceros to the end!!!
+var moveZeros = function (arr_1) {
+    let arr_ceros = [];
+    let arr_others = [];
+    let final_array = [];
+
+    for (let i = 0; i < arr_1.length; i++){
+        if (arr_1[i] === 0) {
+            arr_ceros.push(arr_1[i])
+        } else {
+            arr_others.push(arr_1[i])
+        }
+    }
+    final_array = arr_others.concat(arr_ceros)
+    return final_array;
+    
+}
+console.log(moveZeros([false,1,0,1,2,0,1,3,"a"]))
+console.log(moveZeros([ 1, 2, 1, 1, 3, 1, 0, 0, 0, 0 ]))
