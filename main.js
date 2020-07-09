@@ -439,4 +439,35 @@ var moveZeros = function (arr_1) {
     
 }
 console.log(moveZeros([false,1,0,1,2,0,1,3,"a"])) //[false, 1, 1, 2, 1, 3, "a", 0, 0]
-console.log(moveZeros([ 1, 2, 1, 1, 3, 1, 0, 0, 0, 0 ])) //[1, 2, 1, 1, 3, 1, 0, 0, 0, 0]
+console.log(moveZeros([1, 2, 1, 1, 3, 1, 0, 0, 0, 0])) //[1, 2, 1, 1, 3, 1, 0, 0, 0, 0]
+
+//FREQUENCY COUNTER
+//write a function that takes 2 arrays and checks if the second array contains the square of each element from the first arrayd regardless of the order. 
+//return true if correct or false otherwise. also, if both arrays are different in sizes, return false.
+
+function same (arr1, arr2) {
+    if(arr1.length !== arr2.length) return false;
+    let frequencyCounter1 = {};
+    let frequencyCounter2 = {};
+    for (let val of arr1){
+      frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
+    }
+    for (let val of arr2){
+      frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
+    }
+    for (let key in frequencyCounter1){
+      if(!(key * key in frequencyCounter2)){
+        return false;
+      }
+      if(frequencyCounter2[key * key] !== frequencyCounter1[key]){
+        return false;
+      }
+    }
+      console.log(frequencyCounter1)
+      console.log(frequencyCounter2)
+    return true;
+  }
+  
+  console.log(same([1,3,9,1],[1,1,81,9]))
+  console.log(same([1,3,9],[2,6,9,81]))
+  console.log(same([1,3,9,10],[2,6,9,81]))
