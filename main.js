@@ -420,6 +420,7 @@ console.log(countTrue([true, false, false, true, false])) //2
 console.log(countTrue([true, false, true, true, false])) //3
 console.log(countTrue([])) //0
 
+
 //pushin ceros to the end!!!
 var moveZeros = function (arr_1) {
     let arr_ceros = [];
