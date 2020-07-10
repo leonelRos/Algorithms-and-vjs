@@ -521,7 +521,30 @@ for(let j = 0; j < str2.length; j++){
 }
 return true;
   }
+
+console.log(validAnagram('azz', 'zza'))
+console.log(validAnagram('qwerqty', 'qqeywrt'))
+console.log(validAnagram('', ''))
   
-  console.log(validAnagram('azz', 'zza'))
-  console.log(validAnagram('qwerqty', 'qqeywrt'))
-  console.log(validAnagram('', ''))
+//Write a function called countUniqueValues,which accepts a sorted arrya and counts
+//the unique values in the array. There can be negative numbers in the array. But it will
+// be sorted.
+
+function countUniqueValues (arr){
+    if(arr.length === 0) return 0
+    arr.sort()
+   let i = 0;
+   for(let j = 1; j < arr.length; j++){
+    
+     if(arr[i] !== arr[j]){   
+       i++;
+       arr[i] = arr[j]
+     }
+   }
+   return i + 1;
+  }
+  
+  
+  console.log(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]))  // 7
+  console.log(countUniqueValues([8,1,6,5,8,4,2,1]))  
+  console.log(countUniqueValues([]))  
