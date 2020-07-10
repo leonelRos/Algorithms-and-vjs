@@ -468,6 +468,35 @@ function same (arr1, arr2) {
     return true;
   }
   
-  console.log(same([1,3,9,1],[1,1,81,9]))
-  console.log(same([1,3,9],[2,6,9,81]))
-  console.log(same([1,3,9,10],[2,6,9,81]))
+console.log(same([1,3,9,1],[1,1,81,9]))
+console.log(same([1,3,9],[2,6,9,81]))
+console.log(same([1, 3, 9, 10], [2, 6, 9, 81]))
+  
+
+  
+  function validAnagram(str1,str2){
+    if(str1.length !== str2.length) return false;
+    let counterStr1 = {};
+    let counterStr2 = {};
+    for(let val of str1){
+      counterStr1[val] = (counterStr1[val] || 0) + 1
+    }
+    for(let val of str2){
+      counterStr2[val] = (counterStr2[val] || 0) + 1
+    }
+    for(let key in counterStr1){
+      if(!(key in counterStr2)){
+        return false;
+      }
+      if(counterStr2[key] !== counterStr1[key]){
+        return false;
+      }
+    // console.log(counterStr1)
+    // console.log(counterStr2)
+    }
+    return true;
+  }
+  
+  console.log(validAnagram('azz', 'zza'))
+  console.log(validAnagram('qwerqty', 'qqeywrt'))
+  console.log(validAnagram('', ''))
