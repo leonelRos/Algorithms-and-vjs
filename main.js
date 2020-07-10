@@ -475,24 +475,46 @@ console.log(same([1, 3, 9, 10], [2, 6, 9, 81]))
 
   
   function validAnagram(str1,str2){
+    // if(str1.length !== str2.length) return false;
+    // let counterStr1 = {};
+    // let counterStr2 = {};
+    // for(let val of str1){
+    //   counterStr1[val] = (counterStr1[val] || 0) + 1
+    // }
+    // for(let val of str2){
+    //   counterStr2[val] = (counterStr2[val] || 0) + 1
+    // }
+    // for(let key in counterStr1){
+    //   if(!(key in counterStr2)){
+    //     return false;
+    //   }
+    //   if(counterStr2[key] !== counterStr1[key]){
+    //     return false;
+    //   }
+    // // console.log(counterStr1)
+    // // console.log(counterStr2)
+    // }
+    // return true;
+
+    //A separate answer with only two loops
     if(str1.length !== str2.length) return false;
-    let counterStr1 = {};
-    let counterStr2 = {};
-    for(let val of str1){
-      counterStr1[val] = (counterStr1[val] || 0) + 1
+    let findLetter = {};
+  
+    for(let i = 0; i < str1.length; i++){
+      var letter = str1[i];
+      findLetter[letter] ? findLetter[letter] += 1 : findLetter[letter] = 1;
     }
-    for(let val of str2){
-      counterStr2[val] = (counterStr2[val] || 0) + 1
-    }
-    for(let key in counterStr1){
-      if(!(key in counterStr2)){
+    console.log(findLetter)
+      //Here we are checking if a matching letter from the second string is inside the 
+    //   first string. If so, substract the letter
+    for(let j = 0; j < str2.length; j++){
+      let letter2 = str2[j]
+      if(!findLetter[letter2]){
         return false;
+      } else {
+        findLetter[letter2] -= 1;
       }
-      if(counterStr2[key] !== counterStr1[key]){
-        return false;
-      }
-    // console.log(counterStr1)
-    // console.log(counterStr2)
+      console.log(findLetter[letter2])
     }
     return true;
   }
