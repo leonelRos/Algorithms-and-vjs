@@ -441,6 +441,9 @@ var moveZeros = function (arr_1) {
 console.log(moveZeros([false,1,0,1,2,0,1,3,"a"])) //[false, 1, 1, 2, 1, 3, "a", 0, 0]
 console.log(moveZeros([1, 2, 1, 1, 3, 1, 0, 0, 0, 0])) //[1, 2, 1, 1, 3, 1, 0, 0, 0, 0]
 
+
+
+
 //FREQUENCY COUNTER
 //write a function that takes 2 arrays and checks if the second array contains the square of each element from the first arrayd regardless of the order. 
 //return true if correct or false otherwise. also, if both arrays are different in sizes, return false.
@@ -496,27 +499,27 @@ console.log(same([1, 3, 9, 10], [2, 6, 9, 81]))
     // }
     // return true;
 
-    //A separate answer with only two loops
-    if(str1.length !== str2.length) return false;
-    let findLetter = {};
-  
-    for(let i = 0; i < str1.length; i++){
-      var letter = str1[i];
-      findLetter[letter] ? findLetter[letter] += 1 : findLetter[letter] = 1;
+//A separate answer with only two loops
+if(str1.length !== str2.length) return false;
+let findLetter = {};
+
+for(let i = 0; i < str1.length; i++){
+    var letter = str1[i];
+    findLetter[letter] ? findLetter[letter] += 1 : findLetter[letter] = 1;
+}
+console.log(findLetter)
+//Here we are checking if a matching letter from the second string is inside the 
+//first string. If so, substract the letter
+for(let j = 0; j < str2.length; j++){
+    let letter2 = str2[j]
+    if(!findLetter[letter2]){
+    return false;
+    } else {
+    findLetter[letter2] -= 1;
     }
-    console.log(findLetter)
-      //Here we are checking if a matching letter from the second string is inside the 
-    //   first string. If so, substract the letter
-    for(let j = 0; j < str2.length; j++){
-      let letter2 = str2[j]
-      if(!findLetter[letter2]){
-        return false;
-      } else {
-        findLetter[letter2] -= 1;
-      }
-      console.log(findLetter[letter2])
-    }
-    return true;
+    console.log(findLetter[letter2])
+}
+return true;
   }
   
   console.log(validAnagram('azz', 'zza'))
