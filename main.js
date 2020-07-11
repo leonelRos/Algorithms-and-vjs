@@ -548,3 +548,30 @@ function countUniqueValues (arr){
   console.log(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]))  // 7
   console.log(countUniqueValues([8,1,6,5,8,4,2,1]))  
   console.log(countUniqueValues([]))  
+
+
+//write a function called sumZero which accepts a sorted array of integers. The function
+//should finf the first pair where the sum is 0. return and array that includes both values
+//that sum to zero or undefined if a pair does not exist
+
+function sumZero(arr) {
+    let leftIndex = 0;
+    let rightIndex = arr.length - 1;
+    //while loop to make sure the left index is lower than right index
+    while(leftIndex < rightIndex){  
+      let sum = arr[leftIndex] + arr[rightIndex];
+      if(sum === 0){
+        return [arr[leftIndex], arr[rightIndex]]
+        //here we break the while loop
+      } else if(sum > 0){
+        //we want the last index in the array to move to the next 
+        rightIndex--;
+      } else {
+        //we want the first index in the array to move to the next 
+        leftIndex++
+      }
+    }
+  }
+  
+  console.log(sumZero([-2,-1,0,5,1,8,5]))
+  console.log(sumZero([-2,-1,0,5,8,5]))
