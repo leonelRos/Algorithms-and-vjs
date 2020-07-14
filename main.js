@@ -575,3 +575,21 @@ function sumZero(arr) {
   
   console.log(sumZero([-2,-1,0,5,1,8,5]))
   console.log(sumZero([-2,-1,0,5,8,5]))
+
+
+//Move the first letter of each word to the end of it, then add "ay" to the end of the word. 
+// Leave punctuation marks untouched.
+// Examples
+// pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
+// pigIt('Hello world !');     // elloHay orldway !
+
+function pigIt(str){
+    let newStr = str.split(" ");
+    let arr = newStr.map(e => {
+      if (!/\w/.test(e)) return e;
+      return e.substring(1) + e.charAt(0) + "ay"
+    })
+    return arr.join(" ")
+}
+  
+console.log(pigIt("Pig latin is cool"))
