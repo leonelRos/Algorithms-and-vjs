@@ -520,7 +520,7 @@ for(let j = 0; j < str2.length; j++){
     console.log(findLetter[letter2])
 }
 return true;
-  }
+}
 
 console.log(validAnagram('azz', 'zza'))
 console.log(validAnagram('qwerqty', 'qqeywrt'))
