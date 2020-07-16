@@ -544,10 +544,9 @@ function countUniqueValues (arr){
    return i + 1;
   }
   
-  
-  console.log(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]))  // 7
-  console.log(countUniqueValues([8,1,6,5,8,4,2,1]))  
-  console.log(countUniqueValues([]))  
+console.log(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]))  // 7
+console.log(countUniqueValues([8,1,6,5,8,4,2,1]))  
+console.log(countUniqueValues([]))  
 
 
 //write a function called sumZero which accepts a sorted array of integers. The function
