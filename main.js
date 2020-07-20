@@ -61,8 +61,6 @@
 
 // }
 
-
-
 // console.log(specialReverse("this is just practice", "t"))
 // console.log(specialReverse("this is just practice", "i"))
 
@@ -317,7 +315,6 @@ function DNAStrand(dna) {
 //need to return a full string of all the words
 console.log(DNAStrand("ATTGC"))
 console.log(DNAStrand("GTAT"))
-
 
 //validate the parenthesis
 function checkParen(paren) {
