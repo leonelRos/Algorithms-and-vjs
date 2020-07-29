@@ -607,7 +607,44 @@ function  arrayDiff(a, b){
     return finalArr
   }
   console.log(arrayDiff([1,2,2,2,3],[2])) //[1,3]
-  console.log(arrayDiff([1,8,2], [])) //[1,3]
-
-
+console.log(arrayDiff([1, 8, 2], [])) //[1,3]
   
+
+
+//   Complete the 'latticePaths' function below.
+//   *
+//   * The function is expected to return an INTEGER.
+//   * The function accepts following parameters:
+//   *  1. INTEGER m
+//   *  2. INTEGER n
+//   * Input 2: (2, 2)
+//   * Output 2: 6 (number of unique paths from top left corner to bottom right corner)
+//   * 
+//   * Input 1: (2, 3)
+//   * Output 2: 10
+//   */
+ 
+ function latticePaths(m, n) {
+     // Write your code here
+   let paths = 0
+   function pathCounter(x,y){
+    
+     if (x==m && y==n){
+       paths++
+       return
+     } else if (x>m || y>n){
+       return
+     } else{
+       pathCounter(x+1, y)
+       pathCounter(x, y+1)
+       
+     }
+     
+     
+   }
+   
+   
+   pathCounter(0,0)
+   return paths
+ }
+ console.log(latticePaths(2,2))  
