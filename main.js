@@ -638,12 +638,8 @@ console.log(arrayDiff([1, 8, 2], [])) //[1,3]
        pathCounter(x+1, y)
        pathCounter(x, y+1)
        
-     }
-     
-     
+     } 
    }
-   
-   
    pathCounter(0,0)
    return paths
  }
