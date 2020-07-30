@@ -620,8 +620,14 @@ console.log(arrayDiff([1, 8, 2], [])) //[1,3]
 //   * Input 2: (2, 2)
 //   * Output 2: 6 (number of unique paths from top left corner to bottom right corner)
 //   * 
+//    0----1----2----3  
+//    |    |    |    |   
+//    1---- ---- ----- 
+//    |    |    |    |   
+//    2---- ---- -----  
+//
 //   * Input 1: (2, 3)
-//   * Output 2: 10
+//   * Output 1: 10
 //   */
  
  function latticePaths(m, n) {
