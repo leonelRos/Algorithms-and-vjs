@@ -636,7 +636,8 @@ console.log(arrayDiff([1, 8, 2], [])) //[1,3]
    function pathCounter(x,y){
     
      if (x==m && y==n){
-       paths++
+         paths++
+         console.log(paths)
        return
      } else if (x>m || y>n){
        return
@@ -650,3 +651,4 @@ console.log(arrayDiff([1, 8, 2], [])) //[1,3]
    return paths
  }
  console.log(latticePaths(2,2))  
+ console.log(latticePaths(2,3))  
