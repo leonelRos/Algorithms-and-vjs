@@ -608,7 +608,6 @@ function  arrayDiff(a, b){
   }
   console.log(arrayDiff([1,2,2,2,3],[2])) //[1,3]
 console.log(arrayDiff([1, 8, 2], [])) //[1,3]
-  
 
 
 //   Complete the 'latticePaths' function below.
@@ -629,7 +628,6 @@ console.log(arrayDiff([1, 8, 2], [])) //[1,3]
 //   * Input 1: (2, 3)
 //   * Output 1: 10
 //   */
- 
  function latticePaths(m, n) {
      // Write your code here
    let paths = 0
